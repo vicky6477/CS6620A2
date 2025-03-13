@@ -14,7 +14,7 @@ http = urllib3.PoolManager()
 BUCKET_NAME = "testbucketcs6620a2"
 
 # External API URL 
-PLOTTING_API_URL = f"https://ha3lwbtfy7.execute-api.us-east-1.amazonaws.com/a2/plot?bucket_name={BUCKET_NAME}"
+PLOTTING_API_URL = f"https://9um2m08abj.execute-api.us-east-1.amazonaws.com/a2/plot?bucket_name={BUCKET_NAME}"
 
 
 def lambda_handler(event, context):
@@ -25,22 +25,22 @@ def lambda_handler(event, context):
         # Step 1: Create `assignment1.txt` with the correct content
         s3_client.put_object(Bucket=BUCKET_NAME, Key="assignment1.txt", Body="Empty Assignment 1")
         print("Successfully Created assignment1.txt.")
-        time.sleep(1.5)
+        time.sleep(2)
 
         # Step 2: Update `assignment1.txt` with new content
         s3_client.put_object(Bucket=BUCKET_NAME, Key="assignment1.txt", Body="Empty Assignment 2222222222")
         print("Successfully updated assignment1.txt.")
-        time.sleep(1.5)
+        time.sleep(2)
 
         # Step 3: Delete `assignment1.txt`
         s3_client.delete_object(Bucket=BUCKET_NAME, Key="assignment1.txt")
         print("Successfully deleted assignment1.txt.")
-        time.sleep(1.5)  
+        time.sleep(2)  
 
         # Step 4: Create `assignment2.txt` with the correct content
         s3_client.put_object(Bucket=BUCKET_NAME, Key="assignment2.txt", Body="33")
         print("Successfully created assignment2.txt.")
-        time.sleep(1.5)
+        time.sleep(2)
 
         # Step 5: Call the external plotting API using urllib3
         print(f"Calling plotting API: {PLOTTING_API_URL}")
