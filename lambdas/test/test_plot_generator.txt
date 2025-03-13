@@ -1,0 +1,23 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /plot",
+  "rawPath": "/plot",
+  "rawQueryString": "bucket_name=testbucketcs6620a2",
+  "queryStringParameters": {
+    "bucket_name": "testbucketcs6620a2"
+  },
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "GET",
+      "path": "/plot",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "123.45.67.89",
+      "userAgent": "PostmanRuntime/7.26.8"
+    }
+  },
+  "isBase64Encoded": false
+}
